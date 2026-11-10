@@ -1,0 +1,137 @@
+{
+  "server_build": "3b938d7",
+  "gpu": "NVIDIA RTX A4000",
+  "planar": {
+    "passes": 24,
+    "cases": 24,
+    "max_gap_error_m": 0.11914921825910518,
+    "fixture": "isolated suspended box surfaces; gap to conservative HGV collision rectangle"
+  },
+  "steering": {
+    "passes": 16,
+    "cases": 16,
+    "max_path_corner_error_m": 0.13354293456923452,
+    "conditions": "held-out signed steering controls .4/.6/.85/.95, both gears, 3m travel, approx5km/h on flat road",
+    "source": "artifacts/live-session/steering-validated-path.json"
+  },
+  "gui": {
+    "frames": 200,
+    "observed_fps_after_20_warmup_frames": 19.9482473080809,
+    "mean_processing_ms": 39.7615319306351,
+    "p95_processing_ms": 44.61939800239634,
+    "max_camera_age_s": 0.05000000074505806,
+    "mode": "real SDL window, validation disabled"
+  },
+  "field": {
+    "count": 38,
+    "numeric_passes": 22,
+    "failed_cases": [
+      {
+        "case": "front_right",
+        "gap_m": 0.5,
+        "blueprint": "vehicle.tesla.model3",
+        "error_m": 0.3792071482108885
+      },
+      {
+        "case": "front_right",
+        "gap_m": 1.0,
+        "blueprint": "vehicle.tesla.model3",
+        "error_m": 0.3790141511329519
+      },
+      {
+        "case": "front_right",
+        "gap_m": 2.0,
+        "blueprint": "vehicle.tesla.model3",
+        "error_m": 0.38154399555161733
+      },
+      {
+        "case": "rear_right",
+        "gap_m": 0.5,
+        "blueprint": "vehicle.tesla.model3",
+        "error_m": 0.4139973071457378
+      },
+      {
+        "case": "rear_right",
+        "gap_m": 1.0,
+        "blueprint": "vehicle.tesla.model3",
+        "error_m": 0.38286981076326976
+      },
+      {
+        "case": "rear_right",
+        "gap_m": 2.0,
+        "blueprint": "vehicle.tesla.model3",
+        "error_m": 0.3808060081386029
+      },
+      {
+        "case": "rear_left",
+        "gap_m": 0.5,
+        "blueprint": "vehicle.tesla.model3",
+        "error_m": 0.40501380176017765
+      },
+      {
+        "case": "rear_left",
+        "gap_m": 1.0,
+        "blueprint": "vehicle.tesla.model3",
+        "error_m": 0.3819279840379277
+      },
+      {
+        "case": "rear_left",
+        "gap_m": 2.0,
+        "blueprint": "vehicle.tesla.model3",
+        "error_m": 0.3848843525784438
+      },
+      {
+        "case": "front_left",
+        "gap_m": 0.5,
+        "blueprint": "vehicle.tesla.model3",
+        "error_m": 0.3795968485727508
+      },
+      {
+        "case": "front_left",
+        "gap_m": 1.0,
+        "blueprint": "vehicle.tesla.model3",
+        "error_m": 0.37807536411284715
+      },
+      {
+        "case": "front_left",
+        "gap_m": 2.0,
+        "blueprint": "vehicle.tesla.model3",
+        "error_m": 0.3895527276377453
+      },
+      {
+        "case": "front",
+        "gap_m": 1.0,
+        "blueprint": "static.prop.trafficcone01",
+        "error_m": 0.19701045832652753
+      }
+    ],
+    "unsupported_or_visual_cases": [
+      {
+        "case": "static.prop.*wall*",
+        "status": "blueprint_unavailable"
+      },
+      {
+        "case": "static.prop.*curb*",
+        "status": "blueprint_unavailable"
+      },
+      {
+        "case": "ground_marker_alignment",
+        "status": "requires_visual_review"
+      }
+    ],
+    "overall": "not all passed; curved vehicle bbox gaps/low-target discrepancy and unavailable wall/curb remain explicit"
+  },
+  "cleanup": {
+    "remaining_new_actor_ids": [],
+    "current_radar_actors": 0,
+    "current_camera_actors": 0,
+    "current_demo_vehicles": 0,
+    "world_synchronous_mode": false
+  },
+  "unit_tests": {
+    "passed": 36,
+    "total": 36,
+    "final_log": "artifacts/live-final/unit-tests.log"
+  },
+  "status": "online_measured_with_documented_limits"
+}

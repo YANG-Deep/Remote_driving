@@ -1,0 +1,56 @@
+{
+  "vehicle": "vehicle.carlamotors.european_hgv",
+  "server_build": "3b938d7",
+  "description": "Measured multi-axle curvature and rear lateral scrub. Linear interpolation of curvature/tan(angle) ratios and slip angle.",
+  "wheelbase_m": 4.41095,
+  "conditions": "approx 5 km/h, flat Town10HD intersection, 3m rear axle travel",
+  "training_logs": [
+    "artifacts/live-session/curvature-slip-training.json"
+  ],
+  "samples": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      17.218496664073186,
+      0.06812026612327197
+    ],
+    [
+      34.47697162422249,
+      0.14195759277613837
+    ],
+    [
+      51.858672835544866,
+      0.24016071727956545
+    ],
+    [
+      69.76442005954782,
+      0.425974509942288
+    ]
+  ],
+  "anchors": "All nonzero angle samples are measured. Zero angle is the straight-motion identity.",
+  "limits": "Calibration at approx 5 km/h; not validated at all speeds, slopes, loads or server builds. Some full-reverse training arcs shorter than 3m; do not count as acceptance passes.",
+  "rear_slip_samples": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      17.218496664073186,
+      -0.0017808446985330302
+    ],
+    [
+      34.47697162422249,
+      0.013239107662435162
+    ],
+    [
+      51.858672835544866,
+      0.04980292104547339
+    ],
+    [
+      69.76442005954782,
+      0.14427090684994098
+    ]
+  ]
+}
